@@ -3,25 +3,25 @@
 ## Homebrew & Anyenv & Nodenv
 
 ```
-$ brew install anyenv
-$ echo 'eval "$(anyenv init - zsh)"' >> ~/.zshrc
-$ exec $SHELL -l
-$ anyenv install nodenv
-$ source .zshrc
-$ nodenv install -l
-$ nodenv install 12.13.1
-$ nodenv install 10.17.0
-$ nodenv global 12.13.1
-$ npm install -g yarn
-$ source .zshrc
-$ npm install -g typescript
+brew install anyenv
+echo 'eval "$(anyenv init - zsh)"' >> ~/.zshrc
+exec $SHELL -l
+anyenv install nodenv
+source .zshrc
+nodenv install -l
+nodenv install 12.13.1
+nodenv install 10.17.0
+nodenv global 12.13.1
+npm install -g yarn
+source .zshrc
+npm install -g typescript
 ```
 
 ## create-react-app
 
 ```
-$ npx create-react-app {project_name} --template typescript
-$ cd {project_name}
+npx create-react-app {project_name} --template typescript
+cd {project_name}
 ```
 
 # Lint & Prettier & Typesyncのインストール
@@ -29,14 +29,14 @@ $ cd {project_name}
 ```
 yarn add -D stylelint prettier
 yarn add -D eslint-plugin-react eslint-plugin-react-hooks eslint-plugin-import eslint-plugin-jest
-eslint-plugin-prefer-arrow eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-config-prettier
-eslint-config-airbnb
+yarn add -D eslint-plugin-prefer-arrow eslint-plugin-jsx-a11y eslint-plugin-prettier eslint-config-prettier
+yarn add -D eslint-config-airbnb
 yarn add -D @typescript-eslint/parser @typescript-eslint/eslint-plugin
 yarn add -D stylelint-config-prettier stylelint-config-standard stylelint-order
-stylelint-config-styled-components stylelint-processor-styled-components
+yarn add -D stylelint-config-styled-components stylelint-processor-styled-components
 yarn add -D prettier-stylelint
 npm install -g typesync
-source .zshrc
+source ~/.zshrc
 typesync
 yarn
 yarn add -D husky lint-staged
