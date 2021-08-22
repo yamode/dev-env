@@ -42,6 +42,15 @@ yarn
 yarn add -D husky lint-staged
 ```
 
+# Firebaseインストール
+
+```
+npm install -g firebase-tools
+source ~/.zshrc
+cd {project_name}
+firebase login
+```
+
 # 各種設定ファイル
 
 ## package.jsonに追記
@@ -50,11 +59,11 @@ yarn add -D husky lint-staged
    "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'; stylelint 'src/**/*.{css,jsx,tsx}'; cd functions/ && eslint 'src/**/*.{js,ts}'",
    "precommit": "lint-staged"
 },
- "husky": {
+"husky": {
     "hooks": {
       "pre-commit": "lint-staged"
     }
- },
+},
  "lint-staged": {
     "src/**/*.{js,jsx,ts,tsx}": [
       "eslint --fix",
